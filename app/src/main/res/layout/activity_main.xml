@@ -6,29 +6,84 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#363F44"
-        android:layout_gravity="center">
-        <EditText
-            android:id="@+id/edtSearch"
-            android:background="@drawable/bg_edit_text_search"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginRight="80dp"
-            android:hint="Nhập tên truyện cần tìm"
-            android:textColorHint="#B3ADAD"
-            android:textSize="20dp"
-            android:gravity="center"
-            android:textColor="#fff"/>
-    </RelativeLayout>
-    <GridView
-        android:id="@+id/gdvListNovel"
+    <androidx.drawerlayout.widget.DrawerLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:numColumns="3"></GridView>
+        android:fitsSystemWindows="true"
+        android:id="@+id/drawerLayout">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#363F44"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:background="#2196F3"
+                    app:navigationIcon="@drawable/ic_action_menu" />
+                <EditText
+                    android:id="@+id/edtSearch"
+                    android:background="@drawable/bg_edit_text_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:hint="Nhập tên truyện cần tìm"
+                    android:textColorHint="#B3ADAD"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:textColor="#fff"/>
+            </LinearLayout>
+            <GridView
+                android:id="@+id/gdvListNovel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="3"></GridView>
+        </LinearLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:id="@+id/navigationView">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:padding="5dp"
+                    android:id="@+id/txvMenuUsername"
+                    android:text="Guest"
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Đăng nhập"
+                    android:id="@+id/btMenuLogin" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Đăng ký"
+                    android:id="@+id/btMenuSignUp" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Đăng xuất"
+                    android:id="@+id/btMenuLogout" />
+            </LinearLayout>
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
 </LinearLayout>

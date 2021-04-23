@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ContentChapActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txvNameNovelContent"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Tên truyện"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/txvNameChapContent"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Tên chương"
+                android:textSize="20dp"
+                android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+                <Button
+                    android:id="@+id/btForwar1"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_action_back"
+                    android:textColor="#000000"
+                    android:layout_marginRight="50dp" />
+                <Button
+                    android:id="@+id/btNext1"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_action_forwar"
+                    android:layout_marginLeft="50dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/txvContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nội dung"
+                android:textSize="17dp"
+                android:padding="5dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+                <Button
+                    android:id="@+id/btForwar2"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_action_back"
+                    android:textColor="#000000"
+                    android:layout_marginRight="50dp" />
+                <Button
+                    android:id="@+id/btNext2"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_action_forwar"
+                    android:layout_marginLeft="50dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

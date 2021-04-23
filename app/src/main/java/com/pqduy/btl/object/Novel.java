@@ -3,8 +3,10 @@ package com.pqduy.btl.object;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Novel {
-    private Integer id, totalChap;
+import java.io.Serializable;
+
+public class Novel implements Serializable {
+    private Integer id, idUser, totalChap;
     private String name, linkImage;
 
     public Novel(){
@@ -13,13 +15,15 @@ public class Novel {
 
     public Novel(JSONObject object) throws JSONException {
         this.id         = object.getInt("id");
+        this.idUser     = object.getInt("idUser");
         this.totalChap  = object.getInt("totalChap");
         this.name       = object.getString("name");
         this.linkImage  = object.getString("linkImage");
     }
 
-    public Novel(Integer id, String name, Integer totalChap, String linkImage) {
+    public Novel(Integer id, Integer idUser, String name, Integer totalChap, String linkImage) {
         this.id         = id;
+        this.idUser     = idUser;
         this.totalChap  = totalChap;
         this.name       = name;
         this.linkImage  = linkImage;
@@ -31,6 +35,14 @@ public class Novel {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(Integer idUser) {
+        this.idUser = idUser;
     }
 
     public Integer getTotalChap() {

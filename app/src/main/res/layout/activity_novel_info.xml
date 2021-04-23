@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NovelInfoActivity"
+    android:orientation="vertical"
+    android:background="#fff">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp">
+        <ImageView
+            android:id="@+id/imgNovelInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/a"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:id="@+id/txvNameNovelInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#B4000000"
+            android:text="Tên truyện"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="35dp"
+            android:padding="5dp"/>
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/lsvListChap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+</LinearLayout>
